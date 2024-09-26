@@ -17,7 +17,7 @@ export default function CompatibilityTest() {
     5: 'Equal Partnership',
     6: 'Meditation/Prayer',
     7: 'Very comfortable',
-    8: 'Yes, I believe it’s essential',
+    8: 'Yes, I believe it is essential',
     9: 'Quality time',
     10: 'Open communication and compromise',
     11: 'More Cats!', // Fun question
@@ -68,7 +68,7 @@ export default function CompatibilityTest() {
     {
       id: 8,
       question: 'Do you believe in seeking professional help (like counseling) for mental health or relationship issues?',
-      options: ['Yes, I believe it’s essential', 'Only in extreme cases', 'No, I prefer to handle things myself'],
+      options: ['Yes, I believe it is essential', 'Only in extreme cases', 'No, I prefer to handle things myself'],
     },
     {
       id: 9,
@@ -97,7 +97,7 @@ export default function CompatibilityTest() {
     },
     {
       id: 12,
-      question: 'iPhone or Samsung?',
+      question: 'iPhone or Samsung?(This is me being petty)',
       options: ['iPhone', 'Samsung'],
     },
   ];

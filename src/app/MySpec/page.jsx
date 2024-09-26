@@ -8,7 +8,7 @@ export default function WhatImLookingFor() {
   return (
     <section id="what-im-looking-for" className="py-12 px-6 bg-blue-900">
       <div className="container mx-auto text-center">
-        <h2 className="text-3xl font-bold text-white mb-8">What I’m Looking For</h2>
+        <h2 className="text-3xl font-bold text-white mb-8">What I am Looking For</h2>
         <div className="flex flex-wrap justify-center gap-8">
           {/* Card 1 */}
           <div
