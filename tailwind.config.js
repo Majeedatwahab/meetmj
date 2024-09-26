@@ -7,9 +7,8 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      backgroundImage: {
+        'hero-image': "url('/images/bg-hero-image.jpeg')", // Custom background image path
       },
     },
   },
