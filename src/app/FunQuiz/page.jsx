@@ -8,7 +8,7 @@ export default function CompatibilityTest() {
   const [userAnswers, setUserAnswers] = useState([]);
   const [matchPercentage, setMatchPercentage] = useState(null);
 
-  // Your reference answers (these are MJ's ideal answers)
+
   const referenceAnswers = {
     1: 'Yes', // Muslim
     2: 'Five times a day',
@@ -20,8 +20,8 @@ export default function CompatibilityTest() {
     8: 'Yes, I believe it is essential',
     9: 'Quality time',
     10: 'Open communication and compromise',
-    11: 'More Cats!', // Fun question
-    12: 'iPhone', // Fun question
+    11: 'More Cats!', 
+    12: 'iPhone', 
   };
 
   const questions = [
@@ -137,7 +137,7 @@ export default function CompatibilityTest() {
 <div className="w-full max-w-sm p-6 bg-white rounded-lg shadow-lg">
   {isMuslim === false ? (
     <div className="text-center">
-      <h2 className="text-2xl font-bold text-gray-800 mb-4">Thank you!</h2>
+      <h2 className="text-2xl font-bold text-gray-800 mb-4">Thank you&#33;</h2>
       <p className="text-gray-600">This test is designed for Muslims only.</p>
     </div>
   ) : step < questions.length ? (
@@ -168,10 +168,10 @@ export default function CompatibilityTest() {
   ) : (
     <div className="text-center">
       <h2 className="text-2xl font-bold text-gray-800 mb-4">Compatibility Score</h2>
-      <p className="text-gray-600 mb-4">You are {matchPercentage}% compatible!</p>
+      <p className="text-gray-600 mb-4">You are {matchPercentage}% compatible&#33;</p>
       {matchPercentage >= 75 ? (
         <div>
-          <p className="text-green-600 mb-4">Great match! You can reach out to me:</p>
+          <p className="text-green-600 mb-4">Great match&#33; You can reach out to me:</p>
           <button className='text-black bg-yellow-500 rounded-md p-2 font-bold'>
 
           <Link href="/ContactMe">
@@ -181,7 +181,7 @@ export default function CompatibilityTest() {
           
         </div>
       ) : (
-        <p className="text-red-600">Sorry, we're not a great match!</p>
+        <p className="text-red-600">Sorry, we&rsquo;re not a great match&#33;</p>
       )}
     </div>
   )}

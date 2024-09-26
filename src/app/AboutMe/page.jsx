@@ -1,4 +1,4 @@
-import { FaLaptop, FaUtensils, FaLeaf } from 'react-icons/fa'; // Example icons
+import { FaLaptop, FaUtensils, FaLeaf } from 'react-icons/fa';
 
 export default function AboutMe() {
   return (
@@ -26,7 +26,7 @@ export default function AboutMe() {
               <FaLeaf className="text-2xl text-yellow-500" />
               <span>Nature and Plants</span>
             </div>
-            {/* Add more hobbies/interests as needed */}
+          
           </div>
         </div>
       </div>

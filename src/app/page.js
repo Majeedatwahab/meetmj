@@ -15,8 +15,8 @@ export default function Home() {
   <Image
     src="/images/bg-hero-image.jpeg"
     alt="MJ"
-    width={256}  // Equivalent to w-64
-    height={256} // Equivalent to h-64
+    width={256}  
+    height={256} 
     className="object-cover rounded-full shadow-lg"
   />
 </div>
