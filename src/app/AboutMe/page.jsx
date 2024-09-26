@@ -8,7 +8,7 @@ export default function AboutMe() {
         <div className="text-center">
           <h2 className="text-3xl font-bold text-white mb-4">About Me</h2>
           <p className="text-lg text-gray-300 mb-6">
-  Hi! I am  Majeedat, a passionate software developer with a love for adventure and new experiences.
+  Hi, I am  Majeedat, a passionate software developer with a love for adventure and new experiences.
   When I am not coding, you might find me exploring nature, tending to my plants, or enjoying delicious food.
   
 </p>

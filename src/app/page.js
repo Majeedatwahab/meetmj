@@ -2,7 +2,7 @@ import Link from "next/link";
 import AboutMe from "./AboutMe/page";
 import MySpec from "./MySpec/page";
 import FunQuiz from "./FunQuiz/page";
-
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -12,17 +12,20 @@ export default function Home() {
       <div className="flex flex-col md:flex-row items-center justify-center max-w-4xl mx-auto">
         {/* Image */}
         <div className="flex-shrink-0 mb-8 md:mb-0 md:mr-8">
-          <img
-            src="/images/bg-hero-image.jpeg"
-            alt="MJ"
-            className="w-64 h-64 object-cover rounded-full shadow-lg"
-          />
-        </div>
+  <Image
+    src="/images/bg-hero-image.jpeg"
+    alt="MJ"
+    width={256}  // Equivalent to w-64
+    height={256} // Equivalent to h-64
+    className="object-cover rounded-full shadow-lg"
+  />
+</div>
 
         {/* Text Content */}
         <div className="text-center md:text-left">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Hey, I’m MJ
+          Hey, I&rsquo;m MJ
+
           </h1>
           <p className="text-lg mb-6">
             Software Developer. Indoor Enthusiast. Lover of Good Food.
