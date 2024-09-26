@@ -15,19 +15,20 @@ export default function CompatibilityTest() {
  
 
   const referenceAnswers = {
-    1: 'Yes',
-    2: 'Five times a day',
-    3: 'Very Important',
-    4: 'Yes',
-    5: 'Equal Partnership',
-    6: 'Meditation/Prayer',
-    7: 'Very comfortable',
-    8: 'Yes, I believe it is essential',
-    9: 'Quality time',
-    10: 'Open communication and compromise',
-    11: 'More Cats!',
-    12: 'Samsung',
+    1: ['Yes'],
+    2: ['Five times a day', 'Occasionally'],
+    3: ['Very Important'],
+    4: ['Yes'],
+    5: ['Equal Partnership'],
+    6: ['Meditation/Prayer', 'Talking to a trusted person'], 
+    7: ['Very comfortable'],
+    8: ['Yes, I believe it is essential'],
+    9: ['Quality time', 'All of it'],
+    10: ['Open communication and compromise'],
+    11: ['Cats', 'More Cats'],
+    12: ['Samsung'],
   };
+  
 
   const questions = [
     { id: 1, question: 'Are you a Muslim?', options: ['Yes', 'No'] },
@@ -38,9 +39,9 @@ export default function CompatibilityTest() {
     { id: 6, question: 'How do you manage stress or emotional challenges in your life?', options: ['Meditation/Prayer', 'Talking to a trusted person', 'Physical activity (sports, exercise)', 'Keeping it to myself'] },
     { id: 7, question: 'How comfortable are you discussing your emotions with a partner?', options: ['Very comfortable', 'Somewhat comfortable', 'Not comfortable'] },
     { id: 8, question: 'Do you believe in seeking professional help (like counseling) for mental health or relationship issues?', options: ['Yes, I believe it is essential', 'Only in extreme cases', 'No, I prefer to handle things myself'] },
-    { id: 9, question: 'How do you express love and affection?', options: ['Verbally (words of affirmation)', 'Physical touch', 'Acts of service', 'Gifts or material things', 'Quality time'] },
+    { id: 9, question: 'How do you express love and affection?', options: ['Verbally (words of affirmation)', 'Physical touch', 'Acts of service', 'Gifts or material things', 'Quality time', 'All of it'] },
     { id: 10, question: 'How do you handle conflicts in a relationship?', options: ['Open communication and compromise', 'Avoid conflict and hope it resolves', 'Get defensive or argue'] },
-    { id: 11, question: 'Cats or Cats? (Because we all know the answer)', options: ['Cats', 'More Cats!'] },
+    { id: 11, question: 'Cats or Cats? (Because we all know the answer or not)', options: ['Cats', 'More Cats', "Anything else as long as its not a cat(But that is just wrong)"] },
     { id: 12, question: 'iPhone or Samsung?(This is me being petty)', options: ['iPhone', 'Samsung'] },
   ];
 
@@ -61,7 +62,7 @@ export default function CompatibilityTest() {
 
     userAnswers.forEach((answer, index) => {
       const questionId = index + 1;
-      if (answer === referenceAnswers[questionId]) {
+     if(referenceAnswers[questionId]?.includes(answer)){
         matchingAnswers++;
       }
     });
@@ -92,7 +93,7 @@ export default function CompatibilityTest() {
       <div className="w-full max-w-sm p-6 bg-white rounded-lg shadow-lg">
         {isMuslim === false ? (
           <div className="text-center">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4">Thank you!</h2>
+            <h2 className="text-2xl font-bold text-gray-800 mb-4">Thank you</h2>
             <p className="text-gray-600">This test is designed for Muslims only.</p>
           </div>
         ) : step < questions.length ? (
@@ -160,7 +161,7 @@ export default function CompatibilityTest() {
             className="text-center"
           >
             <h2 className="text-2xl font-bold text-gray-800 mb-4">Compatibility Score</h2>
-            <p className="text-gray-600 mb-4">You are {matchPercentage}% compatible!</p>
+            <p className="text-gray-600 mb-4">We are {matchPercentage}% compatible!</p>
             {matchPercentage >= 75 ? (
               <div>
                 <p className="text-green-600 mb-4">Great match! You can reach out to me:</p>
@@ -169,7 +170,7 @@ export default function CompatibilityTest() {
                 </button>
               </div>
             ) : (
-              <p className="text-red-600">Sorry, we’re not a great match!</p>
+              <p className="text-red-600">Sorry, we are not a great match!</p>
             )}
           </motion.div>
         )}
